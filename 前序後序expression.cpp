@@ -1,4 +1,3 @@
-// 11027217­J¦öºÕ 11027243³¯«a§± 
 #include <string>			// string class
 #include <cstdlib>			// system, atoi
 #include <iostream>			// cin, cout
@@ -151,7 +150,7 @@ bool isInfix( string input, int &type ) { 			// check whether it is an infix exp
 		return false;
 	}//if
 	
-	for( int i = 0; input[i] != '\0'; i++ ) {		// type=1:operator error¡Atype=2:operand¡Atype=3:()
+	for( int i = 0; input[i] != '\0'; i++ ) {		// type=1:operator errorï¼Œtype=2:operandï¼Œtype=3:()
 		if ( input[i] == '(' ) {
 			i++;
 			if ( input[i] == ')' ) {
@@ -338,7 +337,7 @@ void toPrefix( string &ori, PostPtr &prefix ) { 		// transform infix into postfi
 	PostPtr now = prefix;
 	Cstack ope, change, buffer;
 	
-	for(int i = 0; ori[i] != '\0'; i++){      //§â¦r¦ê­Ë¹L¨Ó¦s¦bstack
+	for(int i = 0; ori[i] != '\0'; i++){      //æŠŠå­—ä¸²å€’éä¾†å­˜åœ¨stack
 	
 		if(isNumber(ori[i])){
 			while(isNumber(ori[i]) && ori[i] != '\0'){
@@ -359,7 +358,7 @@ void toPrefix( string &ori, PostPtr &prefix ) { 		// transform infix into postfi
 		
 	}//for
 	
-	ori.clear();//²MªÅ­ì¦r¦ê
+	ori.clear();//æ¸…ç©ºåŸå­—ä¸²
 	for(int i = 0; !change.empty(); i++){
 		ori[i] = change.top();
 		change.pop();
